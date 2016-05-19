@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_margin="15dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/thermostatControlImage"
+        android:src="@drawable/thermostat" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thermostatControlImage"
+        android:gravity="center"
+        android:layout_marginBottom="-30dp"
+        android:id="@+id/indoor"
+        android:textSize="20sp"
+        android:text="INDOOR"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_below="@id/indoor"
+        android:id="@+id/topThermostatLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/temperatureControlTxt"
+            android:textSize="150sp"
+            android:text="70°"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp">
+
+            <RadioGroup
+                android:id="@+id/thermostatModeRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20sp"
+                    android:text="OFF"
+                    android:id="@+id/offThermostatRadioBtn" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20sp"
+                    android:text="COOL"
+                    android:id="@+id/coolThermostatRadioBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="HEAT"
+                    android:id="@+id/heatThermostatRadioBtn"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/topThermostatLayout"
+        android:textOn="HEAT"
+        android:textOff="COOL"
+        android:id="@+id/thermostatSwitch"
+        android:layout_centerHorizontal="true"
+        android:background="#F1B82D" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/thermostatSwitch"
+        android:layout_marginTop="30dp"
+        android:id="@+id/thermostatSetBtns">
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="-"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:background="@drawable/gold_circle"
+            android:id="@+id/thermostatDown"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="SET TO  "
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thermostatSetToText"
+            android:text="74°"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="+"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:background="@drawable/gold_circle"
+            android:id="@+id/thermostatUp"
+            />
+
+
+        </LinearLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/topThermostatLayout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#F1B82D"/>
+
+</RelativeLayout>

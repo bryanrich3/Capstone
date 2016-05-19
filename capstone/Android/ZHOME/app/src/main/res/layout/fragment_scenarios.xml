@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scenariosFragment"
+    >
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scenariosListView">
+    </ListView>
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:baselineAlignBottom="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/gold_circle"
+
+        />
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:baselineAlignBottom="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/add"
+        android:background="@android:color/transparent"
+        android:id="@+id/addScenarioBtn"
+        />
+
+</RelativeLayout>
